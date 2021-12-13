@@ -5,6 +5,8 @@ USER root
 
 RUN echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 
+RUN cat /etc/resolv.conf
+
 RUN apt-get update
 
 RUN apt-get install -y \
