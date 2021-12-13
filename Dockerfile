@@ -3,7 +3,7 @@ FROM jenkins/inbound-agent:4.7-1
 
 USER root
 
-RUN ping -c2 download.docker.com
+RUN sleep 1000
 
 RUN apt-get install -y \
     apt-transport-https \
