@@ -3,7 +3,7 @@ FROM jenkins/inbound-agent:4.7-1
 
 USER root
 
-RUN sleep 1000
+RUN apt-get update
 
 RUN apt-get install -y \
     apt-transport-https \
