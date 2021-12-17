@@ -1,5 +1,5 @@
-FROM jenkins/inbound-agent:4.7-1
-
+#FROM jenkins/inbound-agent:4.7-1
+FROM  ubuntu:latest
 
 USER root
 
