@@ -1,5 +1,5 @@
-FROM jenkins/inbound-agent:4.7-1
-
+#FROM jenkins/inbound-agent:4.7-1
+FROM ubuntu:latest
 RUN ping -c2 1.1.1.1
 
 USER root
@@ -10,9 +10,9 @@ RUN cat /etc/resolv.conf && ls -l /etc/resolv.conf
 
 RUN ping -c2 1.1.1.1
 
-#RUN ping -c2 download.docker.com
+RUN ping -c2 download.docker.com
 
-#RUN apt-get update
+RUN apt-get update
 
 #RUN apt-get install -y \
 #    apt-transport-https \
