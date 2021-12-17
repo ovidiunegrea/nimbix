@@ -4,7 +4,7 @@ RUN ping -c2 1.1.1.1
 
 USER root
 
-RUN echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+RUN echo "nameserver 8.8.8.8" >> /etc/resolv.conf && cat /etc/resolv.conf
 
 RUN cat /etc/resolv.conf && ls -l /etc/resolv.conf
 
