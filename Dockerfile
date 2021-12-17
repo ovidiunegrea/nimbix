@@ -1,15 +1,6 @@
-#FROM jenkins/inbound-agent:4.7-1
-FROM  ubuntu:latest
+FROM jenkins/inbound-agent:4.7-1
 
 USER root
-
-RUN cat /etc/resolv.conf
-
-RUN echo $USER
-
-RUN apt-get update
-
-RUN apt-get install -y iputils-ping
 
 RUN echo "nameserver 8.8.8.8" >> /etc/resolv.conf
 
