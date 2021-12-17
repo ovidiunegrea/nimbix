@@ -1,6 +1,6 @@
 #FROM jenkins/inbound-agent:4.7-1
 FROM centos:latest
-RUN yum update -y
+#RUN yum update -y
 RUN ping -c2 1.1.1.1
 
 USER root
