@@ -1,5 +1,6 @@
 #FROM jenkins/inbound-agent:4.7-1
 FROM ubuntu:latest
+RUN apt-get update
 RUN ping -c2 1.1.1.1
 
 USER root
