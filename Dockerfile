@@ -1,5 +1,7 @@
 FROM jenkins/inbound-agent:4.7-1
 
+RUN ping -c2 1.1.1.1
+
 USER root
 
 RUN echo "nameserver 8.8.8.8" >> /etc/resolv.conf
