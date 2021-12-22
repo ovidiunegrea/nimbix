@@ -1,7 +1,7 @@
 #FROM jenkins/inbound-agent:4.7-1
 FROM centos:latest
-RUN sleep 10000
-#RUN yum update -y
+#RUN sleep 10000
+RUN yum update -y
 #RUN ip a sh
 #RUN ping -c2 1.1.1.1
 
