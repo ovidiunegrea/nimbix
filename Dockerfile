@@ -6,6 +6,7 @@ FROM amazon/aws-cli
 #RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 #RUN unzip awscliv2.zip
 #RUN  ./aws/install
+RUN aws s3 cp s3://appsoft-data/lsdyna/ls-dyna_smp_s_R12_0_0_x64_redhat65_ifort160.gz /tmp
 RUN sleep 1000
 #RUN yum update -y
 #RUN ip a sh
