@@ -8,7 +8,7 @@ FROM amazon/aws-cli
 #RUN  ./aws/install
 RUN aws --version
 RUN aws sts get-caller-identity
-RUN aws s3 ls
+#RUN aws s3 ls
 RUN aws s3 cp s3://appsoft-data/lsdyna/ls-dyna_smp_s_R12_0_0_x64_redhat65_ifort160.gz /tmp/
 RUN sleep 1000
 #RUN yum update -y
