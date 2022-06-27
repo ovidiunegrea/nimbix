@@ -1,6 +1,10 @@
 #FROM jenkins/inbound-agent:4.7-1
 FROM centos:latest
-#RUN sleep 1000
+RUN yum update -y && yum install -y unzip
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN  ./aws/install
+RUN sleep 1000
 #RUN yum update -y
 #RUN ip a sh
 #RUN ping -c2 1.1.1.1
