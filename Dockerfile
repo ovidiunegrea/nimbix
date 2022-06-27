@@ -1,6 +1,7 @@
-#FROM jenkins/inbound-agent:4.7-1
-FROM centos:latest
-RUN yum update -y && yum install -y unzip
+FROM rockylinux:8
+
+RUN dnf -y update && \
+    dnf -y install unzip
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
 RUN  ./aws/install
