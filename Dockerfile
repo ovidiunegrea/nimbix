@@ -1,10 +1,11 @@
-FROM rockylinux:8
+FROM amazon/aws-cli
+#FROM rockylinux:8
 
-RUN dnf -y update && \
-    dnf -y install unzip
-RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-RUN unzip awscliv2.zip
-RUN  ./aws/install
+#RUN dnf -y update && \
+#    dnf -y install unzip
+#RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+#RUN unzip awscliv2.zip
+#RUN  ./aws/install
 RUN sleep 1000
 #RUN yum update -y
 #RUN ip a sh
