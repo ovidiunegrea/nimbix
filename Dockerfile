@@ -1,4 +1,4 @@
-FROM amazon/aws-cli
+FROM amazon/aws-cli as builder
 #FROM rockylinux:8
 
 #RUN dnf -y update && \
@@ -6,11 +6,17 @@ FROM amazon/aws-cli
 #RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 #RUN unzip awscliv2.zip
 #RUN  ./aws/install
-RUN aws --version
-RUN aws sts get-caller-identity
-RUN aws s3 ls
-RUN aws s3 cp s3://appsoft-data/lsdyna/ls-dyna_smp_s_R12_0_0_x64_redhat65_ifort160.gz /opt 
-RUN touch /opt/test
+#RUN aws --version
+#RUN aws sts get-caller-identity
+#RUN aws s3 ls
+RUN aws s3 cp s3://appsoft-data/lsdyna/ls-dyna_smp_s_R12_0_0_x64_redhat65_ifort160.gz /tmp/
+#RUN touch /opt/test
+
+FROM rockylinux:8
+COPY --from=builder /tmp/ls-dyna_smp_s_R12_0_0_x64_redhat65_ifort160.gz  /opt
+WORKDIR /opt
+
+
 #RUN sleep 1000
 #RUN yum update -y
 #RUN ip a sh
