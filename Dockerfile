@@ -13,7 +13,7 @@ RUN aws sts get-caller-identity
 #RUN touch /opt/test
 
 FROM rockylinux:8
-COPY --from=builder /tmp/ls-dyna_smp_s_R12_0_0_x64_redhat65_ifort160.gz  /opt
+#COPY --from=builder /tmp/ls-dyna_smp_s_R12_0_0_x64_redhat65_ifort160.gz  /opt
 WORKDIR /opt
 
 
